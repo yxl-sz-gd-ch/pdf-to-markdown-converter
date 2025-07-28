@@ -1,0 +1,45 @@
+{
+  "name": "学术论文配置",
+  "description": "适用于包含大量公式、图表和参考文献的学术论文",
+  "config": {
+    "output_format": "markdown",
+    "format_lines": true,
+    "force_ocr": false,
+    "strip_existing_ocr": false,
+    "use_llm": true,
+    "llm_service": "OpenAI",
+    "model": "gpt-4",
+    "fallback_extraction": true,
+    "debug": false,
+    "workers": 2
+  },
+  "recommended_settings": {
+    "page_range": "",
+    "output_directory": "./output/academic_papers/",
+    "batch_size": 5
+  },
+  "use_cases": [
+    "学术论文转换",
+    "研究报告处理",
+    "科技文献转换",
+    "包含复杂公式的文档"
+  ],
+  "expected_features": {
+    "math_formulas": "优秀",
+    "tables": "良好",
+    "images": "完整提取",
+    "references": "保持格式",
+    "structure": "智能识别"
+  },
+  "performance": {
+    "typical_speed": "2-3分钟/10页",
+    "memory_usage": "2-4GB",
+    "accuracy": "90-95%"
+  },
+  "notes": [
+    "启用LLM可显著提高公式识别准确性",
+    "format_lines选项有助于改善数学公式显示",
+    "建议使用GPT-4获得最佳效果",
+    "复杂表格可能需要手动调整"
+  ]
+}

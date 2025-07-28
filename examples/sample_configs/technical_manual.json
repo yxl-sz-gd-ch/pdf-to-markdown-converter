@@ -1,0 +1,59 @@
+{
+  "name": "技术手册配置",
+  "description": "适用于技术文档、用户手册、API文档等结构化文档",
+  "config": {
+    "output_format": "markdown",
+    "format_lines": true,
+    "force_ocr": false,
+    "strip_existing_ocr": false,
+    "use_llm": true,
+    "llm_service": "OpenAI",
+    "model": "gpt-3.5-turbo",
+    "fallback_extraction": true,
+    "debug": false,
+    "workers": 4
+  },
+  "recommended_settings": {
+    "page_range": "",
+    "output_directory": "./output/technical_docs/",
+    "batch_size": 10
+  },
+  "use_cases": [
+    "技术手册转换",
+    "API文档处理",
+    "用户指南转换",
+    "产品说明书",
+    "操作手册"
+  ],
+  "expected_features": {
+    "code_blocks": "良好识别",
+    "diagrams": "完整提取",
+    "step_by_step": "结构保持",
+    "screenshots": "高质量提取",
+    "tables": "格式完整"
+  },
+  "performance": {
+    "typical_speed": "1-2分钟/10页",
+    "memory_usage": "1-3GB",
+    "accuracy": "85-90%"
+  },
+  "optimization_tips": [
+    "技术文档通常结构清晰，可以使用较高的workers数量",
+    "GPT-3.5-turbo在技术文档上表现良好且成本较低",
+    "启用fallback_extraction确保所有截图和图表被提取",
+    "适合批量处理多个文档"
+  ],
+  "common_elements": {
+    "headings": "自动识别层级结构",
+    "code_snippets": "保持格式和语法高亮标记",
+    "numbered_lists": "保持编号和缩进",
+    "bullet_points": "转换为Markdown列表",
+    "cross_references": "尽可能保持链接"
+  },
+  "notes": [
+    "技术文档的图片通常是截图和图表，备用引擎很重要",
+    "代码块识别准确性较高",
+    "表格转换效果良好",
+    "适合大批量处理"
+  ]
+}

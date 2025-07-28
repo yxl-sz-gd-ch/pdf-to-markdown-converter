@@ -1,0 +1,79 @@
+{
+  "name": "扫描文档配置",
+  "description": "适用于扫描的PDF文档，需要OCR处理的图片化文档",
+  "config": {
+    "output_format": "markdown",
+    "format_lines": false,
+    "force_ocr": true,
+    "strip_existing_ocr": true,
+    "use_llm": true,
+    "llm_service": "OpenAI",
+    "model": "gpt-4",
+    "fallback_extraction": true,
+    "debug": true,
+    "workers": 1
+  },
+  "recommended_settings": {
+    "page_range": "",
+    "output_directory": "./output/scanned_docs/",
+    "batch_size": 3
+  },
+  "use_cases": [
+    "扫描的纸质文档",
+    "图片化的PDF文件",
+    "老旧文档数字化",
+    "手写文档识别",
+    "低质量PDF修复"
+  ],
+  "expected_features": {
+    "text_recognition": "依赖OCR质量",
+    "image_extraction": "原始扫描图片",
+    "layout_preservation": "尽力保持",
+    "table_recognition": "有限支持",
+    "handwriting": "部分支持"
+  },
+  "performance": {
+    "typical_speed": "3-5分钟/10页",
+    "memory_usage": "3-6GB",
+    "accuracy": "70-85%（取决于扫描质量）"
+  },
+  "ocr_optimization": {
+    "force_ocr": "强制对所有页面执行OCR",
+    "strip_existing_ocr": "移除可能存在的低质量OCR文本",
+    "preprocessing": "自动图像预处理提高识别率",
+    "language_detection": "自动检测文档语言"
+  },
+  "quality_factors": [
+    "扫描分辨率（推荐300DPI以上）",
+    "图像清晰度和对比度",
+    "文字大小和字体",
+    "页面倾斜和变形程度",
+    "背景噪声和污渍"
+  ],
+  "processing_tips": [
+    "单进程处理避免资源冲突",
+    "启用调试模式查看详细OCR信息",
+    "使用GPT-4提高文本理解和修正",
+    "小批量处理避免内存不足",
+    "预处理图片可提高识别率"
+  ],
+  "limitations": [
+    "手写文字识别准确率有限",
+    "复杂表格可能识别不完整",
+    "图片中的文字可能丢失",
+    "处理速度相对较慢",
+    "需要较多系统资源"
+  ],
+  "post_processing": {
+    "manual_review": "建议人工检查OCR结果",
+    "text_correction": "使用LLM辅助文本修正",
+    "format_adjustment": "手动调整格式和布局",
+    "image_verification": "确认重要图片完整性"
+  },
+  "notes": [
+    "OCR处理需要大量计算资源，建议单独处理",
+    "扫描质量直接影响转换效果",
+    "启用调试模式可以看到详细的OCR过程",
+    "建议预先提高扫描图片质量"
+  ]
+}
